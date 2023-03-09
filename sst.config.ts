@@ -1,8 +1,8 @@
 import { SSTConfig } from "sst";
 import { API } from "./stacks/MyStack";
 
-export default {
-  config(_input) {
+const config = {
+  config(input) {
     return {
       name: "sst-example",
       region: "us-east-1",
@@ -12,3 +12,5 @@ export default {
     app.stack(API);
   },
 } satisfies SSTConfig;
+
+export default config;
